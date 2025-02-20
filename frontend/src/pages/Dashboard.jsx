@@ -41,9 +41,9 @@ function Dashboard() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    navigate('/');
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/");
   };
 
   const getTimeAgo = (date) => {
@@ -54,31 +54,39 @@ function Dashboard() {
       week: 604800,
       day: 86400,
       hour: 3600,
-      minute: 60
+      minute: 60,
     };
 
     for (const [unit, secondsInUnit] of Object.entries(intervals)) {
       const interval = Math.floor(seconds / secondsInUnit);
       if (interval >= 1) {
-        return `${interval} ${unit}${interval === 1 ? '' : 's'} ago`;
+        return `${interval} ${unit}${interval === 1 ? "" : "s"} ago`;
       }
     }
-    return 'just now';
+    return "just now";
   };
 
   return (
     <div className="min-h-screen bg-[#F5F6FA] p-6">
       <nav className="flex justify-between items-center mb-8">
         <div className="flex items-center gap-2">
-          <img src="/assets/logo-purple.png" alt="Ques.AI Logo" className="h-8" />
+          <img
+            src="/assets/logo-purple.png"
+            alt="Ques.AI Logo"
+            className="h-8"
+          />
           <h1 className="text-[#7E22CE] text-2xl font-bold">Ques.AI</h1>
         </div>
         <div className="flex items-center gap-4">
-          <div className="p-2 shadow-sm hover:shadow-md transition-shadow">
+          <div className="">
             <img src="/assets/setting.png" alt="Settings" className="w-6 h-6" />
           </div>
-          <div className=" shadow-sm hover:shadow-md transition-shadow">
-            <img src="/assets/notifications.png" alt="Notifications" className="w-6 h-6" />
+          <div className=" ">
+            <img
+              src="/assets/notifications.png"
+              alt="Notifications"
+              className="w-6 h-6"
+            />
           </div>
         </div>
       </nav>
@@ -107,9 +115,9 @@ function Dashboard() {
                   <div className="w-12 h-12 rounded-lg bg-orange-400 flex items-center justify-center">
                     <span className="text-white text-xl font-semibold">
                       {project.name
-                        .split(' ')
-                        .map(word => word[0])
-                        .join('')
+                        .split(" ")
+                        .map((word) => word[0])
+                        .join("")
                         .toUpperCase()
                         .slice(0, 2)}
                     </span>
@@ -123,7 +131,8 @@ function Dashboard() {
                       {project.fileCount || 0} Files
                     </p>
                     <p className="text-sm text-gray-400">
-                      Last edited {getTimeAgo(project.updatedAt || project.createdAt)}
+                      Last edited{" "}
+                      {getTimeAgo(project.updatedAt || project.createdAt)}
                     </p>
                   </div>
                 </div>
@@ -207,4 +216,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard; 
+export default Dashboard;
