@@ -27,9 +27,7 @@ function AccountSettings() {
 
   return (
     <div className="flex h-screen bg-[#F5F6FA]">
-      {/* Sidebar */}
       <div className="w-74 bg-white h-full flex flex-col">
-        {/* Logo */}
         <div className="p-4 flex items-center">
           <img src="/assets/logo-purple.png" alt="Ques.AI" className="h-8" />
           <h1 className="mx-2 font-bold text-purple-700 text-xl">
@@ -37,7 +35,6 @@ function AccountSettings() {
           </h1>
         </div>
 
-        {/* Menu Items */}
         <div className="flex-1 py-4">
           <div className="space-y-2">
             <div className="px-4 py-2 bg-purple-50 text-purple-700 font-medium">
@@ -58,7 +55,6 @@ function AccountSettings() {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="p-4 space-y-4">
           <div className="px-4 py-2 text-gray-600 hover:bg-gray-50 cursor-pointer">
             Help
@@ -79,9 +75,7 @@ function AccountSettings() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 p-6 overflow-auto">
-        {/* Header/Navigation */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2 text-gray-500">
             <span>Home Page</span>
@@ -99,12 +93,10 @@ function AccountSettings() {
               className="flex items-center gap-2 text-gray-600 hover:text-gray-800"
             >
               <img src="/assets/logout.png" alt="Logout" className="w-6 h-6" />
-             
             </button>
           </div>
         </div>
 
-        {/* Back Button and Title */}
         <div className="flex items-center gap-4 mb-8">
           <button 
             onClick={() => navigate(-1)}
@@ -115,9 +107,7 @@ function AccountSettings() {
           </button>
         </div>
 
-        {/* Account Settings Content */}
         <div className="max-w-4xl">
-          {/* Profile Section */}
           <div className="flex items-center gap-6 mb-12">
             <img 
               src="/assets/avatar.png" 
@@ -143,7 +133,6 @@ function AccountSettings() {
             </div>
           </div>
 
-          {/* Subscriptions Section */}
           <div>
             <h2 className="text-2xl font-bold mb-6">Subscriptions</h2>
             <div className="bg-[#FDF4FF] rounded-lg p-6 flex justify-between items-center">

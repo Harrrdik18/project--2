@@ -4,7 +4,7 @@ const File = require('../models/file.model');
 exports.createProject = async (req, res) => {
   try {
     const { name } = req.body;
-    const userId = req.user.id;// From auth middleware
+    const userId = req.user.id;
 
     if (!name || name.trim().length === 0) {
       return res.status(400).json({ error: 'Project name is required' });
@@ -72,7 +72,6 @@ exports.uploadFile = async (req, res) => {
 
     await newFile.save();
     
-    // Update project's updatedAt
     await Project.findByIdAndUpdate(projectId, { updatedAt: Date.now() });
 
     res.status(201).json({

@@ -15,7 +15,6 @@ function ProjectDetail() {
     setShowModal(true);
   };
 
-  // Add useEffect to fetch files when component mounts
   useEffect(() => {
     const fetchFiles = async () => {
       try {
@@ -31,7 +30,6 @@ function ProjectDetail() {
     fetchFiles();
   }, [projectId]);
 
-  // Update handleUpload function
   const handleUpload = async (e) => {
     e.preventDefault();
 
@@ -65,7 +63,6 @@ function ProjectDetail() {
     }
   };
 
-  // Add this section after the Cards Grid
   const FilesSection = () => (
     <div className="mt-12">
       {files.length > 0 ? (
@@ -154,7 +151,7 @@ function ProjectDetail() {
     </div>
   );
 
-  // Add this near the top of the component with other functions
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
@@ -163,9 +160,9 @@ function ProjectDetail() {
 
   return (
     <div className="flex h-screen bg-[#F5F6FA]">
-      {/* Sidebar */}
+  
       <div className="w-74 bg-white h-full flex flex-col ">
-        {/* Logo */}
+   
         <div className="p-4 order- flex items-center">
           <img src="/assets/logo-purple.png" alt="Ques.AI" className="h-8" />
           <h1 className="mx-2 font-bold text-purple-700 text-xl">
@@ -194,7 +191,7 @@ function ProjectDetail() {
           </div>
         </div>
 
-        {/* Bottom Section */}
+   
         <div className="p-4 space-y-4">
           <div className="px-4 py-2 text-gray-600 hover:bg-gray-50 cursor-pointer">
             Help
@@ -218,9 +215,7 @@ function ProjectDetail() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 p-6 overflow-auto">
-        {/* Top Navigation */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-2 text-gray-500">
             <span>Home Page</span>
@@ -244,9 +239,7 @@ function ProjectDetail() {
 
         <h1 className="text-2xl font-bold mb-8">Add Podcast</h1>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-3 gap-6">
-          {/* RSS Feed Card */}
           <div
             className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
             onClick={() => handleOpenModal("rss")}
@@ -262,7 +255,6 @@ function ProjectDetail() {
             </div>
           </div>
 
-          {/* YouTube Video Card */}
           <div
             className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
             onClick={() => handleOpenModal("youtube")}
@@ -282,7 +274,6 @@ function ProjectDetail() {
             </div>
           </div>
 
-          {/* Upload Files Card */}
           <div
             className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
             onClick={() => handleOpenModal("upload")}
@@ -305,7 +296,6 @@ function ProjectDetail() {
 
         <FilesSection />
 
-        {/* Modal */}
         {showModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-lg p-6 w-full max-w-md">

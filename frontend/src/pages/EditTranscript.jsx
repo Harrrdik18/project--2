@@ -49,14 +49,14 @@ function EditTranscript() {
 
   return (
     <div className="flex h-screen bg-[#F5F6FA]">
-      {/* Sidebar */}
+   
       <div className="w-64 bg-white h-full flex flex-col border-r">
-        {/* Logo */}
+      
         <div className="p-4 border-b">
           <img src="/assets/logo-purple.png" alt="Ques.AI" className="h-8" />
         </div>
 
-        {/* Menu Items */}
+   
         <div className="flex-1 py-4">
           <div className="space-y-2">
             <div className="px-4 py-2 bg-purple-50 text-purple-700 font-medium">
@@ -77,7 +77,7 @@ function EditTranscript() {
           </div>
         </div>
 
-        {/* Bottom Section */}
+ 
         <div className="border-t p-4 space-y-4">
           <div className="px-4 py-2 text-gray-600 hover:bg-gray-50 cursor-pointer">
             Help
@@ -96,9 +96,9 @@ function EditTranscript() {
         </div>
       </div>
 
-      {/* Main Content */}
+
       <div className="flex-1 p-6 overflow-auto">
-        {/* Header */}
+
         <div className="flex items-center justify-between mb-6">
           <div>
             <div className="flex items-center gap-2 text-gray-500 mb-2">
@@ -133,7 +133,6 @@ function EditTranscript() {
           </div>
         </div>
 
-        {/* Transcript Editor */}
         <div className="bg-white rounded-lg p-6">
           <div className="mb-4">
             <h3 className="text-purple-600 font-medium mb-2">Speaker</h3>

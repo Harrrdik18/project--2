@@ -4,7 +4,6 @@ const instance = axios.create({
   baseURL: 'https://project-2-pvnm.onrender.com/api',
 });
 
-// Add a request interceptor
 instance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
@@ -18,7 +17,6 @@ instance.interceptors.request.use(
   }
 );
 
-// Add a response interceptor
 instance.interceptors.response.use(
   (response) => response,
   (error) => {

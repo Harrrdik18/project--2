@@ -22,7 +22,6 @@ function Register() {
     e.preventDefault();
     setError("");
 
-    // Password validation
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match");
       return;
@@ -43,7 +42,6 @@ function Register() {
       );
 
       if (response.data.success) {
-        // Store the token in localStorage
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
         navigate("/dashboard");

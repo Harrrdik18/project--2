@@ -28,11 +28,11 @@ function Login() {
       );
 
       if (response.data.success) {
-        // Store the token in localStorage
+
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
 
-        // Redirect to dashboard
+ 
         navigate("/dashboard");
       }
     } catch (error) {
@@ -72,7 +72,6 @@ function Login() {
           </div>
         )}
 
-        {/* Login Form */}
         <form className="flex flex-col px-12 gap-4" onSubmit={handleLogin}>
           <div className="flex flex-col gap-2">
             <input
